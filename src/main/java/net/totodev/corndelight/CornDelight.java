@@ -14,15 +14,15 @@ public class CornDelight implements ModInitializer {
     public static final ItemGroup ITEM_GROUP = FarmersDelightMod.ITEM_GROUP;
     public static final String MODID = "corn_delight";
 
+    public static Item.Settings defaultItemSettings() {
+        return new Item.Settings().group(ITEM_GROUP);
+    }
+
     @Override
     public void onInitialize() {
         ItemRegistry.registerAll();
         BlockRegistry.registerAll();
         ComposterRegistry.registerCompost();
         WildCornGeneration.registerGeneration();
-    }
-
-    public static Item.Settings defaultItemSettings() {
-        return new Item.Settings().group(ITEM_GROUP);
     }
 }

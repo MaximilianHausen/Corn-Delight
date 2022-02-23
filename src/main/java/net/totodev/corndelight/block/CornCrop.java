@@ -1,13 +1,17 @@
 package net.totodev.corndelight.block;
 
 import net.minecraft.block.*;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
@@ -51,25 +55,32 @@ public class CornCrop extends CropBlock {
     }
 
     @Override
+    public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+        BlockState down = world.getBlockState(pos.down());
+        if (down.isOf(this))
+            world.setBlockState(pos, getDefaultState().with(UPPER, true));
+        super.onPlaced(world, pos, state, placer, itemStack);
+    }
+
+    @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockPos downpos = pos.down();
-        if (world.getBlockState(downpos).isOf(this))
-            return !world.getBlockState(downpos).get(UPPER)
-                    && (world.getLuminance(pos) >= 8 || world.isSkyVisible(pos))
-                    && getAge(world.getBlockState(downpos)) >= GROW_UPPER_AGE;
+        BlockState down = world.getBlockState(downpos);
+        if (down.isOf(this))
+            return !down.get(UPPER)
+                    && (world.getBaseLightLevel(pos, 0) >= 8 || world.isSkyVisible(pos))
+                    && getAge(down) >= GROW_UPPER_AGE;
         return super.canPlaceAt(state, world, pos); // Forge: Not into MML because HighCropBlock has the same condition
     }
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random rand) {
-        if (!world.isChunkLoaded(pos.getX(), pos.getZ()))
-            return; // Forge: Idk what this does but I kept it
         int age = getAge(state);
-        if (world.getLuminance(pos) >= 9 && age < getMaxAge())
-            world.setBlockState(pos, withAge(age + 1).with(UPPER, state.get(UPPER)), 2);
+        if (world.getBaseLightLevel(pos, 0) >= 9 && age < getMaxAge())
+            world.setBlockState(pos, this.withAge(age + 1).with(UPPER, state.get(UPPER)), 2);
         if (state.get(UPPER))
             return;
-        if (age >= GROW_UPPER_AGE && getDefaultState().canPlaceAt(world, pos.up()) && world.isAir(pos.up()))
+        if (age + 1 < getMaxAge() && age >= GROW_UPPER_AGE && world.isAir(pos.up()) && getDefaultState().canPlaceAt(world, pos.up()))
             world.setBlockState(pos.up(), getDefaultState().with(UPPER, true));
     }
 

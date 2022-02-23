@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "corn_delight",
+  "version": "${version}",
+  "name": "Corn Delight",
+  "description": "Do you like Corn?\nNow Corn in Farmer's Delight!",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/MaximilianHausen/corndelight-fabric"
+  },
+  "license": "MIT",
+  "icon": "assets/corn_delight/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.totodev.corndelight.CornDelightClient"
+    ],
+    "main": [
+      "net.totodev.corndelight.CornDelight"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.13.2",
+    "fabric": "*",
+    "minecraft": "1.18.1",
+    "farmersdelight": "*"
+  }
+}

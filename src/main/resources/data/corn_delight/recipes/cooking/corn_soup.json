@@ -2,27 +2,27 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "forge:crops/corn"
+      "tag": "fabric:crops/corn"
     },
     {
-      "tag": "forge:salad_ingredients"
+      "tag": "fabric:salad_ingredients"
     },
     [
       {
-        "tag": "forge:raw_chicken"
+        "tag": "fabric:raw_chicken"
       },
       {
-        "tag": "forge:raw_pork"
+        "tag": "fabric:raw_pork"
       },
       {
-        "tag": "forge:raw_beef"
+        "tag": "fabric:raw_beef"
       },
       {
         "item": "minecraft:brown_mushroom"
       }
     ],
     {
-      "tag": "forge:milk"
+      "tag": "fabric:milk"
     }
   ],
   "result": {

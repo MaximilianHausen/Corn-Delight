@@ -1,20 +1,22 @@
 {
-  "conditions": [
+  "fabric:load_conditions": [
     {
-      "type": "forge:mod_loaded",
-      "modid": "create"
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "create"
+      ]
     }
   ],
   "type": "create:mixing",
   "ingredients": [
     {
-      "tag": "forge:crops/corn"
+      "tag": "fabric:crops/corn"
     },
     {
-      "tag": "forge:crops/corn"
+      "tag": "fabric:crops/corn"
     },
     {
-      "tag": "forge:crops/corn"
+      "tag": "fabric:crops/corn"
     },
     {
       "fluid": "minecraft:water",

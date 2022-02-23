@@ -2,10 +2,10 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "forge:crops/corn"
+      "tag": "fabric:crops/corn"
     },
     {
-      "tag": "forge:milk"
+      "tag": "fabric:milk"
     },
     {
       "item": "minecraft:sugar"

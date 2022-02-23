@@ -2,26 +2,26 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "forge:tortilla"
+      "tag": "fabric:tortilla"
     },
     {
-      "tag": "forge:salad_ingredients"
+      "tag": "fabric:salad_ingredients"
     },
     {
-      "tag": "forge:crops/onion"
+      "tag": "fabric:crops/onion"
     },
     [
       {
-        "tag": "forge:cooked_chicken"
+        "tag": "fabric:cooked_chicken"
       },
       {
-        "tag": "forge:cooked_pork"
+        "tag": "fabric:cooked_pork"
       },
       {
-        "tag": "forge:cooked_beef"
+        "tag": "fabric:cooked_beef"
       },
       {
-        "tag": "forge:cooked_mutton"
+        "tag": "fabric:cooked_mutton"
       }
     ]
   ],

@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "forge:crops/corn"
+      "tag": "fabric:crops/corn"
     },
     {
-      "tag": "forge:crops/corn"
+      "tag": "fabric:crops/corn"
     },
     {
-      "tag": "forge:milk"
+      "tag": "fabric:milk"
     },
     {
-      "tag": "forge:eggs"
+      "tag": "fabric:eggs"
     }
   ],
   "result": {

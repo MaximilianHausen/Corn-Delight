@@ -1,9 +1,7 @@
-package cn.mcmod.corn_delight.item;
+package net.totodev.corndelight.item;
 
-import java.util.function.Supplier;
-
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.block.ComposterBlock;
+import net.minecraft.item.Item;
 
 public class ComposterRegistry {
     public static void registerCompost() {
@@ -19,7 +17,8 @@ public class ComposterRegistry {
         register(ItemRegistry.CORNBREAD, 0.85F);
         register(ItemRegistry.TACO, 1F);
     }
-    private static void register(Supplier<? extends Item> item, float chance) {
-        ComposterBlock.COMPOSTABLES.put(item.get(), chance);
+
+    private static void register(Item item, float chance) {
+        ComposterBlock.ITEM_TO_LEVEL_INCREASE_CHANCE.put(item, chance);
     }
 }

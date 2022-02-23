@@ -2,13 +2,13 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "forge:seeds/corn"
+      "tag": "fabric:seeds/corn"
     },
     {
-      "tag": "forge:seeds/corn"
+      "tag": "fabric:seeds/corn"
     },
     {
-      "tag": "forge:milk"
+      "tag": "fabric:milk"
     }
   ],
   "result": {

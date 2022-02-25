@@ -6,7 +6,7 @@
   "description": "Do you like Corn?\nNow Corn in Farmer's Delight!",
   "authors": [],
   "contact": {
-    "repo": "https://github.com/MaximilianHausen/corndelight-fabric"
+    "repo": "https://github.com/MaximilianHausen/Corn-Delight"
   },
   "license": "MIT",
   "icon": "assets/corn_delight/icon.png",
@@ -20,7 +20,7 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=0.13.2",
+    "fabricloader": "*",
     "fabric": "*",
     "minecraft": "1.18.1",
     "farmersdelight": "*"

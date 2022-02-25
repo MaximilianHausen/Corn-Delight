@@ -1,0 +1,20 @@
+{
+  "block.corn_delight.corn_crate": "Maiskiste",
+  "block.corn_delight.corn_kernel_bag": "Maissack",
+  "block.corn_delight.corn_crop": "Maispflanze",
+  "block.corn_delight.wild_corn": "Wildmais",
+  "item.corn_delight.grilled_corn": "Gegrillter Mais",
+  "item.corn_delight.boiled_corn": "Gekochter Mais",
+  "item.corn_delight.corn": "Mais",
+  "item.corn_delight.corn_seeds": "Maiskörner",
+  "item.corn_delight.corn_soup": "Maissuppe",
+  "item.corn_delight.cornbread": "Maisbrot",
+  "item.corn_delight.cornbread_stuffing": "Maisbrotfüllung",
+  "item.corn_delight.cornbread_batter": "Maisbrotteig",
+  "item.corn_delight.creamed_corn": "Maispüree",
+  "item.corn_delight.creamy_corn_drink": "Cremiges Maisgetränk",
+  "item.corn_delight.popcorn": "Popcorn",
+  "item.corn_delight.taco": "Taco",
+  "item.corn_delight.tortilla": "Tortilla",
+  "item.corn_delight.tortilla_raw": "Rohe Tortilla"
+}
